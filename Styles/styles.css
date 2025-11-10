@@ -1,0 +1,217 @@
+/* ------------------------- */
+/* 1. Global Styles & Variables */
+/* ------------------------- */
+:root {
+    --primary-color: #34335E; 
+    --primary-light-bg: linear-gradient(90deg, #FFFFFF 0%, #F9FAFB 100%); 
+    --secondary-color: #F9FAFB; 
+    --disabled-bg: #eef0f4;
+    --disabled-text: #a0a0c0;
+    --text-dark: #333;
+    --text-light: #777;
+    --font-main: 'Roboto', sans-serif; 
+}
+
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1800px;
+    }
+}
+
+body {
+    font-family: var(--font-main);
+    background: var(--primary-light-bg); 
+    color: var(--text-dark);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex-grow: 1;
+}
+
+/* ------------------------- */
+/* 2. Header & Navigation   */
+/* ------------------------- */
+.logo-img {
+    max-height: 55px; 
+    width: auto;
+}
+
+.login-btn {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 0.6rem 1.25rem;
+    color: var(--text-dark);
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.login-btn:hover {
+    background-color: #ffffff;
+    color: var(--text-dark);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* === UPDATED LOGIN BUTTON ICON STYLES === */
+.login-btn .fa-user {
+    background: var(--primary-color); /* Changed background */
+    color: #ffffff; /* Changed icon color */
+    border-radius: 50%;
+    padding: 0.4rem;
+    font-size: 0.7rem;
+}
+
+.login-btn .fa-chevron-right {
+    font-size: 0.6rem;
+    color: var(--primary-color) /* Added chevron color */
+}
+/* === END UPDATED SECTION === */
+
+
+/* ------------------------------------- */
+/* 3. Main Content & Stepper Styles      */
+/* ------------------------------------- */
+.page-title {
+    color: var(--primary-color);
+    font-size: 2.25rem;
+}
+
+.stepper {
+    position: relative;
+    margin-bottom: 2.5rem;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding-left: 0;
+}
+
+.stepper::before {
+    content: '';
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10%;
+    height: 2px;
+    background-color: #E5E7EB;
+    z-index: 0;
+}
+
+.stepper-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 190px;
+    position: relative;
+    z-index: 1;
+}
+
+.step-number {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+    color: var(--text-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    border: 2px solid #e0e0e0;
+    transition: all 0.3s ease;
+}
+
+.step-label {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.stepper-item.active .step-number {
+    background-color: #34335E;
+    color: #ffffff;
+    border-color: #34335E;
+    box-shadow: 0 0 0 4px rgba(52, 51, 94, 0.2);
+}
+
+.stepper-item.active .step-label {
+    color: #34335E;
+}
+
+
+/* ------------------------- */
+/* 4. Inspection Form Card  */
+/* ------------------------- */
+.inspection-card {
+    max-width: 480px;
+}
+
+/* === UPDATED FORM ICON SPACING === */
+.form-icon {
+    width: 70px;
+    height: 70px;
+    background: var(--primary-light-bg);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    margin: 0 auto 2rem auto; /* Increased bottom margin from 1.5rem to 2rem */
+    border: 1px solid rgba(52, 51, 94, 0.1); 
+}
+/* === END UPDATED SECTION === */
+
+.form-icon i {
+    font-size: 2rem;
+    color: var(--disabled-text);
+}
+
+#submit-btn:disabled {
+    background-color: var(--disabled-bg);
+    color: var(--disabled-text);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: #3a378a; 
+    border-color: #3a378a;
+}
+
+/* ------------------------- */
+/* 5. Responsive Design     */
+/* ------------------------- */
+@media (max-width: 768px) {
+    .page-title {
+        font-size: 1.75rem;
+    }
+    
+    .stepper-item {
+        width: 120px;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-title {
+        font-size: 1.5rem;
+    }
+
+    .stepper-item {
+        width: 100px;
+        font-size: 0.8rem;
+    }
+    
+    .stepper::before {
+        width: 20%;
+    }
+    
+    .inspection-card {
+        box-shadow: none !important;
+        background-color: transparent;
+    }
+}

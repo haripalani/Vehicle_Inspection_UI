@@ -181,6 +181,12 @@ main {
     border: 1px solid #D1D5DB;
 }
 
+.inspection-form{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
 .form-icon {
     width: 70px;
     height: 70px;
@@ -188,7 +194,7 @@ main {
     border-radius: 50%;
     display: grid;
     place-items: center;
-    margin: 0 auto 2rem auto; 
+    margin: 0 auto 1rem auto; 
     border: 1px solid rgba(52, 51, 94, 0.1); 
 }
 

@@ -15,58 +15,65 @@
 </head>
 <body>
 
-    <header class="py-3">
-        <div class="container">
-            <nav class="d-flex justify-content-between align-items-center">
-                <a href="#" class="logo">
-                    <img src="/Assets/Logo.png" alt="Kuijpers Rental.nl Logo" class="logo-img">
-                </a>
-                
-                <a href="#" class="btn login-btn d-flex align-items-center shadow-sm">
-                    <i class="fa-solid fa-user me-2"></i>
-                    Login
-                    <i class="fa-solid fa-chevron-right ms-2"></i>
-                </a>
-            </nav>
-        </div>
-    </header>
-
-    <main class="container text-center py-4 py-md-5">
-
-        <div id="progress-bar-placeholder"></div>
-
-
-        <h1 class="page-title text-uppercase fw-bold mb-4 mb-md-5">
-            Voertuig Inspectie Systeem
-        </h1>
-
-        <div class="card inspection-card shadow-lg border-0 rounded-4 mx-auto">
-            <div class="card-body p-4 p-md-5">
-                <form id="inspection-form">
+    <div class="main-wrapper">
+        <header class="py-3">
+            <div class="container">
+                <nav class="d-flex justify-content-between align-items-center">
+                    <a href="#" class="logo">
+                        <img src="/Assets/Logo.png" alt="Kuijpers Rental.nl Logo" class="logo-img">
+                    </a>
                     
-                    <div class="form-icon">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                    </div>
-
-                    <div class="mb-3">
-                        <label for="kenteken-input" class="form-label fw-bold">Kenteken</label>
-                        <input type="text" class="form-control form-control-lg text-center" id="kenteken-input" placeholder="Voer kenteken in">
-                    </div>
-                    
-                    <button type="submit" id="submit-btn" class="btn btn-lg w-100 text-uppercase fw-bold" disabled>
-                        <i class="fa-solid fa-magnifying-glass me-2"></i>
-                        Zoeken
-                    </button>
-                    
-                </form>
+                    <a href="#" class="btn login-btn d-flex align-items-center shadow-sm">
+                        <i class="fa-solid fa-user me-2"></i>
+                        Login
+                        <i class="fa-solid fa-chevron-right ms-2"></i>
+                    </a>
+                </nav>
             </div>
-        </div>
+        </header>
 
-        <p class="text-muted small mt-4 mx-auto" style="max-width: 350px;">
-            Voer een geldig kenteken in om de uitgebreide voertuig inspectie te beginnen
-        </p>
+        <main class="text-center py-4 py-md-5 flex-grow-1">
 
-    </main>
+            <div class="main-content-area">
+                
+                <div id="progress-bar-placeholder" class="mb-5"></div>
+
+                <div class="main-form-section">
+
+                    <h1 class="page-title text-uppercase fw-bold">
+                        Voertuig Inspectie Systeem
+                    </h1>
+
+                    <div class="card inspection-card shadow-lg border-0 rounded-4 mx-auto">
+                        <div class="card-body p-4 p-md-5">
+                            <form id="inspection-form" class="inspection-form">
+                                
+                                <div class="form-icon">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="kenteken-input" class="form-label fw-bold">Kenteken</label>
+                                    <input type="text" class="form-control form-control-lg text-center" id="kenteken-input" placeholder="Voer kenteken in">
+                                </div>
+                                
+                                <button type="submit" id="submit-btn" class="btn btn-lg w-100 text-uppercase fw-bold" disabled>
+                                    <i class="fa-solid fa-magnifying-glass me-2"></i>
+                                    Zoeken
+                                </button>
+                                
+                            </form>
+                        </div>
+                    </div>
+
+                    <p class="text-muted small mx-auto" style="max-width: 350px;">
+                        Voer een geldig kenteken in om de uitgebreide voertuig inspectie te beginnen
+                    </p>
+                </div>
+            </div>
+
+        </main>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     
